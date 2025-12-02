@@ -3,6 +3,7 @@ package com.vitormoraes.bffagendadortarefas.infrastructure.client;
 
 import com.vitormoraes.bffagendadortarefas.business.dto.out.TarefasDTOResponse;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -10,5 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface EmailClient {
 
+    @PostMapping
     void enviarEmail(@RequestBody TarefasDTOResponse dto);
 }
